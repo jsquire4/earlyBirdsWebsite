@@ -76,7 +76,7 @@ button:focus, input[type="button"]:focus {
 
 .footer-custom {
   width: 100%;
-  background-color: #194179;
+  background-color: white;
 }
 
 .footer-wrapper {
@@ -207,8 +207,6 @@ button:focus, input[type="button"]:focus {
   margin-bottom: 25px;
 }
 
-
-
 .about-page-block {
   width: 95%;
   margin-right: auto;
@@ -227,4 +225,37 @@ button:focus, input[type="button"]:focus {
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+}
+
+.jumbotron {
+  background-image: url("/../images/bathroomHero.jpg");
+  background-size: contain;
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border-radius: 0;
+}
+
+
+.jumbotron-inner {
+  background-color: hsla(235, 29%, 25%, 0.85);
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-custom-bath {
+  border: 2px solid white;
+  border-radius: 2px;
+  color: white;
+}
+
+.btn-custom-bath:hover{
+  outline: none;
+  background-color: white;
+  color: #194179;
 }

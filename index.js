@@ -31,7 +31,7 @@ var util = require('util');
 
 // SET PORT AND PUBLIC DIRECTORIES
   app.disable('x-powered-by');
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 8080);
   app.use(express.static(__dirname + '/public'));
   
 
