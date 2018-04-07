@@ -14,6 +14,7 @@ var MongoStore = require('connect-mongo')(session);
 var mysql = require('mysql');
 var helpers = require('handlebars-helpers')();
 var util = require('util');
+var favicon = require('serve-favicon');
   
 
   var fs = require('fs');
@@ -28,6 +29,7 @@ var util = require('util');
   app.engine('handlebars', handlebars.engine);
   app.set('view engine', 'handlebars');
   app.use(express.static(__dirname + '/public'));
+  app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 
 
 // SET PORT AND PUBLIC DIRECTORIES
@@ -44,10 +46,6 @@ var util = require('util');
 // ROUTING
 
   app.use('/', routes);
-
-  app.get('/favicon.ico', function(req, res) {
-    res.sendStatus(204);
-  });
 
   app.use(function(err, req, res, next){
     console.error(err.stack);
