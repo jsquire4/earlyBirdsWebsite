@@ -27,14 +27,16 @@ var util = require('util');
   var handlebars = require('express-handlebars').create({defaultLayout: 'main'});
   app.engine('handlebars', handlebars.engine);
   app.set('view engine', 'handlebars');
+  app.use(express.static(__dirname + '/public'));
 
 
 // SET PORT AND PUBLIC DIRECTORIES
   app.disable('x-powered-by');
-  app.set('port', process.env.PORT || 8080);
-  app.use(express.static(__dirname + '/public'));
+  app.listen(process.env.PORT || 8080, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });
   
-
+  
 // MIDDLEWARE
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({extended: false}));
@@ -42,6 +44,10 @@ var util = require('util');
 // ROUTING
 
   app.use('/', routes);
+
+  app.get('/favicon.ico', function(req, res) {
+    res.sendStatus(204);
+  });
 
   app.use(function(err, req, res, next){
     console.error(err.stack);
@@ -53,7 +59,5 @@ var util = require('util');
     res.render('404');
   });
 
-// PORT LISTENING 
-  app.listen(app.get('port'), function(){
-    console.log("Express started at http://localhost:" + app.get('port') + " Press Ctrl-C to terminate");
-  });
+module.exports = app;
+  
