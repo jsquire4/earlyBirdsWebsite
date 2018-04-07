@@ -1,0 +1,167 @@
+<div class="container page-content">
+  <div class = "purchase-container">
+    <div class = "purchase-options">
+      <h3 class = "jobs-list-title">Purchase</h3>
+      <p class = "purchase-text">Please enter your information below.</p>
+      <hr />
+    </div>
+    <div class = "lower-purchase-block">
+      <div class = "purchase-form-holder">
+        <form class = "purchase-form" action = "/purchase">
+          <div class = "primary-entry-block">
+            <div class = "shipping-block">
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Price:</strong> $49.99/Unit</p>
+                <p class = "purchase-label"><strong>Quantity</strong></p>
+                <input type = "number" id = "purchase-first" name = "purchase_quantity" placeholder = "0">
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>First Name:</strong></p>
+                <input type = "text" id = "purchase-first" name = "purchase_firstname" placeholder = "First Name">
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Last Name:</strong></p>
+                <input type = "email" id = "purchase-last" name = "purchase_lastname" placeholder = "Last Name">
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Email:</strong></p>
+                <input type = "text" id = "purchase-email" name = "purchase_email" placeholder = "Email" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Telephone:</strong></p>
+                <input type = "text" id = "purchase-phone" name = "purchase_phone" placeholder = "000-000-0000" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Address:</strong></p>
+                <input type = "text" id = "purchase-address" name = "purchase_address" placeholder = "Address" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>City:</strong></p>
+                <input type = "text" id = "purchase-city" name = "purchase_city" placeholder = "City" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>State:</strong></p>
+                <input type = "text" id = "purchase-state" name = "purchase_state" placeholder = "State" >
+              </div>
+            </div>
+            <div class = "cc-card-info">
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Credit Card Number:</strong></p>
+                <input type = "text" id = "purchase-ccnum" name = "purchase_ccnum" placeholder = "#" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Month:</strong></p>
+                <input type = "text" id = "purchase-mth" name = "purchase_mth" placeholder = "MM" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Year:</strong></p>
+                <input type = "text" id = "purchase-yr" name = "purchase_yr" placeholder = "YYYY" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>CVV:</strong></p>
+                <input type = "text" id = "purchase-cvv" name = "purchase_cvv" placeholder = "0000" >
+              </div>
+              <div class = "comments-input-block">
+                <p class = "purchase-label"><strong>Zip Code:</strong></p>
+                <input type = "text" id = "purchase-zip" name = "purchase_zip" placeholder = "12345" >
+              </div>
+            </div>
+          </div>
+          <div class = "order-review-holding-block">
+            <h3 class = "order-review-title">Review your order</h3>
+            <hr />
+            <br />
+            <div class = "order-review">
+              <div class = "financial-info">
+                <p class = "review" id = "quantity"><strong>Quantity:</strong></p>
+                <p class = "review" id = "price"><strong>Price:</strong></p>
+                <p class = "review" id = "subtotal"><strong>Subtotal:</strong></p>
+                <p class = "review" id = "tax"><strong>Tax:</strong></p>
+                <hr />
+                <p class = "review" id = "total"><strong>Total:</strong></p>
+              </div>
+              <div class = "shipping-info">
+                <p class = "review"><strong>Shipping information</strong></p>
+                <p class = "review" id = "names"><strong>Name:</strong> </p>
+                <p class = "review" id = "address"><strong>Address:</strong> </p>
+                <p class = "review" id = "city"><strong>City:</strong></p>
+                <p class = "review" id = "state"><strong>State:</strong> </p>
+              </div>
+            </div>
+            <hr />
+          </div>
+          <div class = "comments-input-block">
+            <button type = "none" class = "btn btn-success support-submit" id = "buybutton">SEND ORDER</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type = "text/javascript">
+$(document).ready(function(){
+
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
+  $('input[name="purchase_quantity"]').focusout(function(){
+    var quantity = $(this).val();
+    var price = 49.99;
+    var subtotal = price * quantity;
+    var taxr = .17;
+    var tax = subtotal * taxr;
+    var total = tax + subtotal;
+    $("#price").html("<strong>Price:</strong> $" + price);
+    $("#quantity").html("<strong>Quantity:</strong> " + quantity);
+    $("#subtotal").html("<strong>Subtotal:</strong> $" + subtotal.toFixed(2));
+    $("#tax").html("<strong>Tax:</strong> $" + tax.toFixed(2));
+    $("#total").html("<strong>Total:</strong> $" + total.toFixed(2));
+  });
+
+  var lastname = "";
+  var firstname = "";
+  var fullname = firstname + " " + lastname;
+
+  $('input[name="purchase_firstname"]').focusout(function(){
+    firstname = $(this).val();
+    fullname = firstname + " " + lastname;
+    $("#names").html("<strong>Name:</strong> " + fullname);
+  });
+  $('input[name="purchase_lastname"]').focusout(function(){
+    lastname = $(this).val();
+    fullname = firstname + " " + lastname;
+    $("#names").html("<strong>Name:</strong> " + fullname);
+  });
+  $('input[name="purchase_address"]').focusout(function(){
+    var address = $(this).val();
+    $("#address").html("<strong>Address:</strong> " + address);
+  });
+  $('input[name="purchase_city"]').focusout(function(){
+    var city = $(this).val();
+    $("#city").html("<strong>City:</strong> " + city);
+  });
+  $('input[name="purchase_state"]').focusout(function(){
+    var state = $(this).val();
+    $("#state").html("<strong>State:</strong> " + state);
+  });
+
+  $("#buybutton").click(function(e){
+    e.preventDefault();
+    alert("This webiste is for demonstration purposes only.  We will not be sending out any mats, and your information will be deleted.");
+    location.reload();
+  });
+});
+</script>
+
+
+
+
+
+
+

@@ -74,53 +74,6 @@ button:focus, input[type="button"]:focus {
   justify-content: space-around;
 }
 
-.footer-custom {
-  width: 100%;
-  background-color: white;
-}
-
-.footer-wrapper {
-  width: 95%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.footer-link-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding-top: 15px;
-
-}
-
-.footer-link {
-  color: white;
-  font-size: 20px;
-  font-family: Montserrat, sans-serif;
-  padding: 0 !important;
-  text-decoration: none;
-  flex-basis: 100%;
-  text-align: center;
-}
-
-.footer-link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.footer-link:active {
-  outline: none;
-}
-
-.footer-copyright {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  padding-bottom: 20px;
-}
-
 .copyright-info, .support-info {
   color: white;
   font-size: 14px;
@@ -128,7 +81,6 @@ button:focus, input[type="button"]:focus {
   text-align: center;
   margin-bottom: 0;
 }
-
 
 .info-block {
   display: flex;
@@ -192,12 +144,10 @@ button:focus, input[type="button"]:focus {
   justify-content: space-between;
 }
 
-
 .card-img-top-custom {
   width: 100%;
   height: 250px;
 }
-
 
 .top-frontpage-block {
   margin-bottom: 50px;
@@ -214,21 +164,21 @@ button:focus, input[type="button"]:focus {
 }
 
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0; 
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 
-.jumbotron {
-  background-image: url("/../images/bathroomHero.jpg");
+.hero-banner {
+  background-image: url("/../images/bathroom.jpg");
   background-size: contain;
   background-size: cover;
   background-position: center bottom;
@@ -240,12 +190,13 @@ button:focus, input[type="button"]:focus {
   border-radius: 0;
 }
 
-
 .jumbotron-inner {
-  background-color: hsla(235, 29%, 25%, 0.85);
+  background-color: hsla(235, 0%, 41%, 0.5);
   color: white;
   width: 100%;
   text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .btn-custom-bath {
@@ -258,4 +209,413 @@ button:focus, input[type="button"]:focus {
   outline: none;
   background-color: white;
   color: #194179;
+}
+
+.info-block-jumbo {
+  min-width: 60%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  item-align: center;
+}
+
+.inner-jumbo {
+  display: flex;
+  flex-direction: column;
+  item-align: center;
+  justify-content: space-around;
+  width: 35%;
+  text-align: center;
+}
+
+.card-holder {
+  min-width: 75%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+}
+
+.card-half {
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+.nav-logo {
+  max-width: 75px;
+  max-height: 65px;
+}
+
+.footer-logo{
+  max-width: 75px;
+}
+
+.footer-custom {
+  width: 100%;
+  background-color: hsla(228, 100%, 14%, 1);
+}
+
+.footer-wrapper {
+  width: 95%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-link-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 15px;
+}
+
+.footer-link {
+  color: white;
+  font-size: 20px;
+  font-family: Montserrat, sans-serif;
+  padding: 0 !important;
+  text-decoration: none;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-link:active {
+  outline: none;
+}
+
+.footer-copyright {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  position: bottom;
+  margin-bottom: -25px;
+}
+
+.footer-links-list {
+  text-decoration: none;
+  list-style: none;
+}
+
+.social-icon {
+  border-radius: 10px;
+  max-width: 30px;
+}
+
+.mission-statement {
+  color: white;
+}
+
+.footer-text {
+  color: white;
+}
+
+.footer-3-col {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-mission, .footer-social, .footer-links {
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-icon-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-custom {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumbotron-about-banner {
+  background-image: url("/../images/bostonU.jpg");
+  background-size: contain;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border-radius: 0;
+}
+
+.team-pics {
+  max-width: 95%;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.person-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.person-image{
+  max-width: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  border-radius: 50px;
+}
+
+.about-block-title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.product-info-block {
+  max-width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+}
+
+.product-info-sub-block {
+  max-width: 95%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+}
+
+.product-feature-block {
+  width: 50%;
+}
+
+.item-features {
+  list-style: none;
+}
+
+.list-feature{
+  display: flex;
+}
+
+.feature {
+  margin-left: 10px;
+}
+
+.product-image {
+  width: 300px;
+}
+
+.channels-stores {
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.channel-icon-block {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.channel-icon {
+  max-width: 125px;
+}
+
+.channel-icon-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.product-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.call-to-action {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-to-action-title {
+  text-align: center;
+}
+
+.btn-home {
+  margin-bottom: 50px;
+  width: 150px;
+}
+
+.item-features {
+  margin-bottom: 45px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.comments-form {
+  width: 100%;
+}
+
+.contacts-lower {
+  display: flex;
+  justify-content: space-around;
+  align-items: none;
+  width: 100%;
+}
+
+.employment-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.comments-label, .employment-label, .purchase-label {
+  padding: 0;
+  margin: 0;
+}
+
+.employment-options {
+  width: 95%;
+  text-align: center;
+}
+
+.jobs-list {
+  list-style: none;
+}
+
+.lower-employment-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.employment-form-holder, .employment-opportunities-block {
+  width: 45%;
+}
+
+.employment-text {
+  margin-bottom: 35px;
+}
+
+.support-submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.order-review {
+  display: flex;
+  justify-content: space-around;
+}
+
+.financial-info {
+  width: 40%;
+}
+
+.shipping-info {
+  width: 40%;
+}
+
+.primary-entry-block {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shipping-block, .cc-card-info{
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+.order-review-title, .order-review-title {
+  text-align: center;
+}
+
+.purchase-options {
+  text-align: center;
+}
+
+.social-side {
+  margin-left: 5px;
+}
+
+.mission-statement {
+  text-align: center;
+}
+
+.social-link {
+  width: 35%;
+}
+
+.social-link, .social-link-bottom {
+  display: flex;
+  flex-direction: row;
+  max-height: 30px;
+}
+
+.social-link:hover, .social-link-bottom:hover {
+  text-decoration: none;
+}
+
+.social-link, .social-link:hover {
+  color: black;
+  text-decoration: none;
+  width: 25%;
+  text-align: left;
+}
+
+.social-link-bottom, .social-link-bottom:hover {
+  color: white;
+  text-decoration: none;
+  width: 35%;
+  text-align: left;
 }

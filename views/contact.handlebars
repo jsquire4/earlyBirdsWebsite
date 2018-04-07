@@ -1,0 +1,108 @@
+<div class="container page-content">
+  
+  <div class = "contact-container">
+    <h3 class = "contact-title">Contact Us!</h3>
+    <div class = "contact-header">
+        <p class = "contact-text">Questions? Concerns? Comments? Liabilities?  Send us a message and let us know--we value your input and your insights!</p>
+    </div>
+    <div class = "contacts-lower">
+      <div class = "comments-container">
+        <form class = "comments-form" method = "POST" action = "/comments">
+          <div class = "comments-input-block">
+            <p class = "comments-label">First Name:</p>
+            <input cols="50" type = "text" class = "comments-first" name = "firstname" placeholder = "First Name">
+          </div>
+          <div class = "comments-input-block">
+            <p class = "comments-label">Last Name:</p>
+            <input cols="50" type = "text" class = "comments-last" name = "lastname" placeholder = "Last Name">
+          </div>
+          <div class = "comments-input-block">
+            <p class = "comments-label">Email:</p>
+            <input cols="50" type = "email" class = "comments-email" name = "email" placeholder = "Email" required>
+          </div>
+          <div class = "comments-input-block">
+            <p class = "comments-label">Message:</p>
+            <textarea rows="4" cols="55" class = "comments-body" wrap = "soft" name = "body" placeholder = "Please enter your questions or comments here and we'll try to get back to you as soon as possible!"></textarea>
+            <br>
+            <button type = "submit" class = "btn btn-success support-submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class = "location-info">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d198593.17128267352!2d-92.47092317814327!3d38.94641028036131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87dcabf3bb8182c9%3A0xa011692dbabd6f20!2sColumbia%2C+MO!5e0!3m2!1sen!2sus!4v1522616187185" width="400" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <p class = "contact-info">Store Hours: 9am - 5pm</p>
+        <p class = "contact-info">Address: 123 Fake St. Columbia, MO 12345</p>
+        <p class = "contact-info">Email: earlybirds999@gmail.com</p>
+        <p class = "contact-info">Phone: 1-800-SOLE-MAT</p>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class = "employment-container">
+    <div class = "employment-options">
+      <h3 class = "jobs-list-title">Employment Opportunities</h3>
+      <p class = "employment-text">Want to work for us?  We're hiring!  Send us a message and we'll get back to you as soon as possible!</p>
+    </div>
+    <div class = "lower-employment-block">
+      <div class = "employment-form-holder">
+        <form class = "employment-form" method = "POST" action = "/employment">
+          <div class = "comments-input-block">
+            <p class = "employment-label">First Name:</p>
+            <input type = "text" class = "employment-first" name = "employment_firstname" placeholder = "First Name">
+          </div>
+          <div class = "comments-input-block">
+            <p class = "employment-label">Last Name:</p>
+            <input type = "text" class = "employment-last" name = "employment_lastname" placeholder = "Last Name">
+          </div>
+          <div class = "comments-input-block">
+            <p class = "employment-label">Email:</p>
+            <input type = "email" class = "employment-email" name = "employment_email" placeholder = "Email" required>
+          </div>
+          <div class = "comments-input-block">
+            <p class = "employment-label">Message:</p>
+            <textarea rows="4" cols="55" class = "employment-body" wrap = "soft" name = "employment_body" placeholder = "Please list what job you are applying for, what your relevant experience is, and why you want to work for us."></textarea>
+            <br>
+            <button type = "submit" class = "btn btn-success support-submit">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class = "employment-opportunities-block">
+        <ul class = "jobs-list">
+          <li class = "job">
+            <p class = "job-text"><strong>CEO</strong>: Run our business.  We really need someone with good leaderhsip experience and business knowledge to help us figure this out.</p>
+          </li>
+          <li class = "job">
+            <p class = "job-text"><strong>CFO</strong>: Make our spreadsheets.  We have a good start, but we think we could do better.  Help us make our financial statements make sense.</p>
+          </li>
+          <li class = "job">
+            <p class = "job-text"><strong>COO</strong>: Run our factory.  If you know how to make stuff, we've got a deal for you. Run our manufacturing base and we can give you money.</p>
+          </li>
+          <li class = "job">
+            <p class = "job-text"><strong>Factory Assosciate</strong>: Make our things.  If you have good artistic skills and like putting things together, come make our mats and do cool things for us.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type = "text/javascript">
+$(document).ready(function(){
+
+  $(window).keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+
+  $("button").click(function(e){
+    e.preventDefault();
+    alert("This webiste is for demonstration purposes only.  Your message will not be sent, and you will not be contacted.");
+    location.reload();
+  });
+});
+</script>
+
